@@ -1,0 +1,1 @@
+{"graph_name": "cage4", "n_nodes": "9", "M_edges": "20", "aut_grp_order": 4, "rho": 132, "avg_support": "14", "tot_support": "7.00", "orbits": "[[ 1, 3 ], [ 2, 4 ], [ 5, 8, 7, 6 ]]", "delta": 6}

@@ -1,0 +1,1 @@
+{"graph_name": "rel3", "n_nodes": "6", "M_edges": "12", "aut_grp_order": 36, "rho": 87, "avg_support": "8", "tot_support": "2.00", "orbits": "[[ 1, 3, 6 ], [ 2, 4, 5 ]]", "delta": 3}

@@ -1,0 +1,1 @@
+{"graph_name": "ENZYMES_g521", "n_nodes": "35", "M_edges": "79", "aut_grp_order": 8, "rho": 8388608000, "avg_support": "6", "tot_support": "2.00", "orbits": "[[ 16, 17 ], [ 30, 33 ], [ 34, 35 ]]", "delta": 7}

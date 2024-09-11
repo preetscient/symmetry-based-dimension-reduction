@@ -1,0 +1,1 @@
+{"graph_name": "ENZYMES_g64", "n_nodes": "29", "M_edges": "49", "aut_grp_order": 288, "rho": 84418589571999320878771863552, "avg_support": "14", "tot_support": "2.00", "orbits": "[[ 1, 15, 2 ], [ 3, 18 ], [ 4, 16 ], [ 11, 29 ], [ 12, 13, 25 ]]", "delta": 2}

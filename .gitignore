@@ -1,3 +1,10 @@
+# Batch - processing (still being tidied)
+batch_run.py
+batch_processing.py
+batch_lumping.py
+batch_auts.py
+batch_gaut2gap.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -5,8 +12,18 @@ __pycache__/
 # C extensions
 *.so
 
+# Data to exclude
+1_network_data/
+2_saucy_output/
+3_gap_readable_automorphism_data/
+4_network_data_csvs/
+description.txt
+large_nets.txt
+skipped_networks.txt
+
 # Distribution / packaging
 .Python
+network_data
 env/
 build/
 develop-eggs/
@@ -22,6 +39,15 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+gappy/
+
+# Notebooks and reports
+notebooks/
+reports/
+scrap/
+install_gap.sh
+Makefile
+tox.ini
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -66,6 +92,11 @@ target/
 # Pycharm
 .idea
 
+# Scrap Work
+scrap/
+notebooks/
+reports/
+
 # VS Code
 .vscode/
 
@@ -76,7 +107,6 @@ target/
 .ipynb_checkpoints/
 
 # exclude data from source control by default
-/data/
 
 # Mac OS-specific storage files
 .DS_Store

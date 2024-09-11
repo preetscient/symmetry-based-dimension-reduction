@@ -1,0 +1,1 @@
+{"graph_name": "ENZYMES_g273", "n_nodes": "40", "M_edges": "84", "aut_grp_order": 96, "rho": 4315918151364777427416907776, "avg_support": "12", "tot_support": "2.00", "orbits": "[[ 1, 14, 23 ], [ 3, 25 ], [ 11, 34 ], [ 13, 24 ], [ 20, 33 ]]", "delta": 3}

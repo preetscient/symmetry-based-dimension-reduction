@@ -1,0 +1,1 @@
+{"graph_name": "email-enron-only", "n_nodes": "143", "M_edges": "623", "aut_grp_order": 2, "rho": 6968982874540819731729911960202612970618880, "avg_support": "2", "tot_support": "2.00", "orbits": "[[ 62, 88 ]]", "delta": 9}

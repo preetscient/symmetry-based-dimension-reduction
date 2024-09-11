@@ -1,0 +1,1 @@
+{"graph_name": "ENZYMES_g195", "n_nodes": "47", "M_edges": "92", "aut_grp_order": 16, "rho": 15515569356800, "avg_support": "12", "tot_support": "3.00", "orbits": "[[ 9, 19 ], [ 10, 20 ], [ 26, 40 ], [ 30, 44 ], [ 31, 45 ], [ 33, 47 ]]", "delta": 7}

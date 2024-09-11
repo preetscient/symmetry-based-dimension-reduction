@@ -1,0 +1,1 @@
+{"graph_name": "reptilia-tortoise-network-pv-2013", "n_nodes": "16", "M_edges": "16", "aut_grp_order": 128, "rho": 3008084, "avg_support": "14", "tot_support": "2.33", "orbits": "[[ 1, 7 ], [ 3, 9 ], [ 4, 10, 15, 16 ], [ 5, 14 ], [ 12, 13 ]]", "delta": 3}

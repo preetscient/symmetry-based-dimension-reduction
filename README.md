@@ -1,57 +1,45 @@
 dsdp_lumping
 ==============================
 
-A short description of the project.
-
-Project Organization
+Installation
 ------------
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+## 1. Install GAP
+Make sure GAP is installed on your system. Instructions can be found [here](https://www.gap-system.org/install/).
 
+## 2. Install Conda
+If Conda is not installed, download and install Miniconda or Anaconda from [here](https://docs.conda.io/en/latest/miniconda.html).
 
---------
+## 3. Download Files
+Download the necessary files for your application, including the setup script and `environment.yml`.
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+## macOS and Linux
+
+**Run the Setup Script**: Open a terminal and execute the setup script to create and activate the Conda environment. Make sure you have execution permissions for the script.
+
+```bash
+chmod +x setup_environment.sh
+./setup_environment.sh
+
+```
+## Windows
+Run the Setup Script: Open Command Prompt or PowerShell and execute the setup script `setup_environment.bat`.
+
+If using a Bash script in a Windows environment, such as Git Bash or WSL (Windows Subsystem for Linux), use:
+
+`bash setup_environment.sh`
+
+## 3. Download Files
+After setting up the environment, you can run the Python script main.py directly. Follow the instructions below:
+
+### For Windows Users
+1. Open Command Prompt or PowerShell.
+2. Navigate to the directory containing main.py.
+3. Run the script using the command:
+`python main.py`
+
+### For macOS and Linux Users
+1. Open a terminal.
+2. Navigate to the directory containing main.py.
+3. Run the script with:
+`python main.py`

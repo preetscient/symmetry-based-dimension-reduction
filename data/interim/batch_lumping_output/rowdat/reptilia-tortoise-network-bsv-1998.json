@@ -1,0 +1,1 @@
+{"graph_name": "reptilia-tortoise-network-bsv-1998", "n_nodes": "88", "M_edges": "184", "aut_grp_order": 128, "rho": 67052899430153142314551370130595096848275651690496, "avg_support": "14", "tot_support": "2.33", "orbits": "[[ 21, 62 ], [ 25, 39 ], [ 29, 41 ], [ 45, 85, 86, 88 ], [ 71, 80 ]]", "delta": 4}

@@ -1,0 +1,1 @@
+{"graph_name": "LF10", "n_nodes": "18", "M_edges": "32", "aut_grp_order": 512, "rho": 40833262, "avg_support": "34", "tot_support": "3.78", "orbits": "[[ 1, 18 ], [ 2, 3, 17, 16 ], [ 4, 5, 14, 15 ], [ 6, 7, 12, 13 ], [ 8, 9, 11, 10 ]]", "delta": 4}
