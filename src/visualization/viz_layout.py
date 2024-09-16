@@ -11,6 +11,7 @@ from pathlib import Path
 
 import plotly.graph_objs as go
 
+
 '''
 This script is a Dash application that allows users to visualize and 
 analyze network data (graphs).
@@ -60,9 +61,14 @@ def get_preloaded_dataset():
     preloaded_path = base_path / 'data' / 'interim' / 'batch_viz_files'
     files = os.listdir(preloaded_path)
 
-    # Return a list of dictionaries containing the filename 
-    # as both the label and value, useful for populating a dropdown menu.
-    return [{'label': file, 'value': file} for file in files]
+    # Create a list of dictionaries with filenames as both label and value
+    dataset_options = [{'label': file, 'value': file} for file in files]
+
+    # Sort the dataset options alphabetically by the 'label' key
+    dataset_options = sorted(dataset_options, key=lambda x: x['label'])
+
+    # Return the sorted list of dataset options
+    return dataset_options
 
 def read_netdat(filepath):
     # Read and load a JSON file from the specified filepath
@@ -88,7 +94,8 @@ def DashStats(net_row):
         'node': f"Nodes: {net_row['n_nodes']}",
         'edge': f"Edges: {net_row['M_edges']}",
         'rho': f"Rho: {net_row['rho']:.2e}",
-        'reduction': '10 to 10',
+        'reduction': f"{10**net_row['delta']}",
+        # 'reduction': f"{10**net_row['delta']:.2e}",
         'delta': f"Δ: {net_row['delta']}"
     }
 
@@ -213,7 +220,7 @@ def DashboardLayout(elements, app, dash_stats, preloaded_options):
                             html.Div(id='preloaded-dataset-selection', style={'display': 'none'}),
                             
                             # Static text explaining the impact of symmetry-based lumping
-                            html.Div('Symmetry-based lumping can reduce the state space of your network from:',
+                            html.Div('Symmetry-based lumping can reduce the state space of your network by:',
                                      style={'fontSize': 20, 'text-align': 'right'}), # Set font size and align right
                             
                             # A div to dynamically display the delta statistic (larger font size)
@@ -293,7 +300,8 @@ def toggle_preloaded_selection(data_source_choice):
             id='preloaded-dataset-dropdown',
             options=get_preloaded_dataset(), # Get available preloaded dataset options
             value=None, # No dataset is selected by default
-            placeholder="Select a preloaded dataset" # Placeholder text for the dropdown
+            placeholder="Select a preloaded dataset", # Placeholder text for the dropdown
+            style = {'color': 'darkgrey'} #Set dropdown text colour to dark grey.
         )
     
     # If 'preloaded' is not selected, hide the dropdown by returning 'display: none' and an empty string

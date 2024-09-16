@@ -5,9 +5,10 @@ from pathlib import Path
 import networkx as nx
 
 def read_in(input_file):
+    print(input_file)
     # Takes in a filename and returns lines of input file as a nested list.
     lines = []
-    for line in open(input_file):
+    for line in open(input_file,'r'):
         newline = line.rstrip()  # Remove trailing spaces or newlines
         lines.append(str(newline).split(' '))  # Split the line by space and append as list
     return lines

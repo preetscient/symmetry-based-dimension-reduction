@@ -1,2 +1,2 @@
 graph_name,n_nodes,M_edges,aut_grp_order,rho,avg_support,tot_support,orbits,delta
-reptilia-tortoise-network-sg_placeholder,24,26,8,3481600,8,2.67,"[[ 1, 4 ], [ 11, 17 ], [ 12, 15 ], [ 18, 19 ]]",5
+reptilia-tortoise-network-sg,24,26,8,3481600,8,2.67,"[[ 1, 4 ], [ 11, 17 ], [ 12, 15 ], [ 18, 19 ]]",5
