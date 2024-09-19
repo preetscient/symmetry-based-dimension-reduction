@@ -119,7 +119,6 @@ def assign_colours(G, filename=None):
 
     if filename is None: # Set default filename if none is provided
         filename = base_path / 'data' / 'processed' / 'lumping_output' / 'orbitcolours.txt'
-        print('colours fname:',filename)
 
     try:
         with open(filename) as coloursf: # Read orbit colour file.

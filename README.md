@@ -29,8 +29,12 @@ If using a Bash script in a Windows environment, such as Git Bash or WSL (Window
 
 `bash setup_environment.sh`
 
-## 3. Download Files
+## 3. Load your network data
+
+
+## 4. Run the code.
 After setting up the environment, you can run the Python script main.py directly. Follow the instructions below:
+
 
 ### For Windows Users
 1. Open Command Prompt or PowerShell.
@@ -43,3 +47,5 @@ After setting up the environment, you can run the Python script main.py directly
 2. Navigate to the directory containing main.py.
 3. Run the script with:
 `python main.py`
+
+

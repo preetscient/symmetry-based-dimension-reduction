@@ -1,6 +1,4 @@
 # Batch - processing (still being tidied)
-batch_run.py
-batch_processing.py
 batch_lumping.py
 batch_auts.py
 batch_gaut2gap.py
