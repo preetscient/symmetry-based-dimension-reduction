@@ -1,23 +1,4 @@
-site_name: My Project Documentation
-
-nav:
-  - Home: index.md  
-  - Main Module: main.md
-  - Pipeline: pipeline.md
-    - Automorphisms: /pipeline/auts.md
-    - Lumping Module: lumping.md
-    - Processing Module: processing.md
-    - Gaut2Gap Module: gaut2gap.md
-  - Pre-loaded data: preloadeddata.md
-    - Batch running module: batch_run.md
-    - Processing: batch_processing.md
-    - Lumping: batch_lumping.md
-    - Automorphisms: batch_auts.md
-    - Gaut2Gap: batch_gaut2gap.md
-  - Visualisation: visualisationoverview.md
-    - Visualization Processing: visualization/vizprocessing.md
-  
-
-
-# theme:
-#   name: material
+site_name: My Docs
+site_url: https://preetscient.github.io/symmetry-based-dimension-reduction/
+repo_url: https://github.com/preetscient/symmetry-based-dimension-reduction
+docs_dir: docs
