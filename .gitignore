@@ -6,10 +6,12 @@ __pycache__/
 *.so
 
 # Data to exclude
-1_network_data/
-2_saucy_output/
-3_gap_readable_automorphism_data/
-4_network_data_csvs/
+data/external/1_network_data/networkrepository/*
+data/external/2_saucy_output/networkrepository/*
+data/external/3_gap_readable_automorphism_data/networkrepository/*
+data/external/4_network_data_csvs/*
+
+
 description.txt
 large_nets.txt
 
