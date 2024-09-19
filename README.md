@@ -1,5 +1,8 @@
 A Dash App to Visualise Dimension Reduction in Real-World Networks
+
 ==============================
+### Documentation can be found here: https://preetscient.github.io/symmetry-based-dimension-reduction/
+
 User Instructions
 ------------
 

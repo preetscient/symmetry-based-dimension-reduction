@@ -11,10 +11,8 @@ data/external/2_saucy_output/networkrepository/*
 data/external/3_gap_readable_automorphism_data/networkrepository/*
 data/external/4_network_data_csvs/*
 
-
 description.txt
 large_nets.txt
-
 
 # Distribution / packaging
 .Python
