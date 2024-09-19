@@ -1,7 +1,6 @@
 A Dash App to Visualise Dimension Reduction in Real-World Networks
 ==============================
-
-Installation
+User Instructions
 ------------
 
 ## 1. Install GAP
