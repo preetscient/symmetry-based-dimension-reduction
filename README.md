@@ -30,7 +30,8 @@ If using a Bash script in a Windows environment, such as Git Bash or WSL (Window
 `bash setup_environment.sh`
 
 ## 3. Load your network data
-
+Save your network data as any delimited file - this should include source nodes in the first column and target nodes in the second column.
+Any subsequent columns are ignored by the 
 
 ## 4. Run the code.
 After setting up the environment, you can run the Python script main.py directly. Follow the instructions below:
