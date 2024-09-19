@@ -1,0 +1,16 @@
+GD95_b.gap
+GD98_b.gap
+GD99_b.gap
+GD98_a.gap
+SW-1000-3-0d3-trial2.gap
+SW-1000-3-0d3-trial3.gap
+aves-geese-female-foraging.gap
+aves-geese-male-foraging.gap
+aves-hens-pecking-order.gap
+bn-macaque-rhesus_brain_2.gap
+ch4-4-b3.gap
+divorce.gap
+lesmis.gap
+mammalia-asianelephant.gap
+mammalia-bat-roosting-indiana.gap
+mammalia-elephantseal-2012-2013.gap

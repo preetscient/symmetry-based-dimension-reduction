@@ -278,14 +278,29 @@ def main():
     stubpath = os.path.join(base_path,'data','interim','batch_gap_output','*')
     stubs = sorted(glob.glob(stubpath))
 
+    # Read skipped networks
+    skipped_networks_file = os.path.join(base_path, 'skipped_networks.txt')
+    if os.path.exists(skipped_networks_file):
+        with open(skipped_networks_file, 'r') as f:
+            skipped_networks = set(line.strip() for line in f)
+    else:
+        skipped_networks = set()
+
     inter_table = []
     
     txtbase = os.path.join(base_path,'data','interim','batch_lumping_output','zaut_test')
     
     for stub in stubs:
-        txt_file = os.path.basename(stub)[:-4] + 'txt'
-        txt_path = os.path.join(txtbase,txt_file)
-        if os.path.exists(txt_file):
+        rowstub = os.path.basename(stub)[:-4]
+
+        # Skip if in skipped networks
+        if rowstub in skipped_networks:
+            print(f"Skipping network: {rowstub} as listed in skipped_networks.txt.")
+            continue
+
+        txt_file = rowstub + '.txt'
+        txt_path = os.path.join(txtbase, txt_file)
+        if os.path.exists(txt_path):
             print(f"Skipping file: {txt_path}. '{txt_file}' already exists.")
         else:
             rowi = []
@@ -294,7 +309,7 @@ def main():
             elapsed_time = time.time() - start_time
 
             if elapsed_time > 120:
-                print(f"{stub}took more than 120s to complete")
+                print(f"{stub} took more than 120s to complete")
                 continue
             inter_table.append(rowi)
 
@@ -312,7 +327,7 @@ def main():
         #'colours']
         
     output_table = pd.DataFrame(inter_table)
-    output_table = output_table.drop(index=df.index[0], axis=0, inplace=True)
+    output_table = output_table.drop(index=output_table.index[0], axis=0)
     tablepath = os.path.join(lumpsout_path,'lumps_out.csv')
     
     output_table.to_csv(tablepath,index=False)
