@@ -1,4 +1,4 @@
-dsdp_lumping
+A Dash App to Visualise Dimension Reduction in Real-World Networks
 ==============================
 
 Installation
