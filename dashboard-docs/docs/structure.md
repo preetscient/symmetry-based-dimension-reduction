@@ -1,7 +1,7 @@
 ## File Structure
 
-
-├── LICENSE \
+```
+├── LICENSE /
 ├── README.md \
 ├── dashboard-docs \
 │   ├── docs \
@@ -84,6 +84,7 @@
 │   │   └── viz_layout.py \
 │   └── vizprocessing.py \
 └── tests \
+```
 
 N.B. To generate this on macOS do: \
 `brew install tree`  \

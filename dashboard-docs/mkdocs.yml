@@ -3,11 +3,28 @@ site_url: https://preetscient.github.io/symmetry-based-dimension-reduction/
 repo_url: https://github.com/preetscient/symmetry-based-dimension-reduction
 docs_dir: docs
 
+theme:
+  name: material
+  
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: teal
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: teal
+      accent: lime
+
 nav:
   - Home: index.md
   - About: about.md
   - Installation: install.md
-  - Folder structure: structure.md
+  - File structure: structure.md
   - Control flow: control.md
   - Data: dataflow.md
 
