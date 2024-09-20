@@ -2,6 +2,7 @@ site_name: My Docs
 site_url: https://preetscient.github.io/symmetry-based-dimension-reduction/
 repo_url: https://github.com/preetscient/symmetry-based-dimension-reduction
 docs_dir: docs
+remote_name: main
 
 theme:
   name: material
