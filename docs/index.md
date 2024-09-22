@@ -1,5 +1,5 @@
 # Symmetry-Based Dimension Reduction of Network Dynamics
-
+![Screenshot of the dashboard developed](dashboard.png)
 Real-world networks are often messy and complex, with large numbers of vertices and edges, high connectivity, and intricate structures. These networks can also be dynamic, with states changing over time. Understanding the behavior of these networks is crucial for interpreting the systems they represent, such as ecosystems, social networks, or the spread of diseases in populations.
 
 ## Project Overview
