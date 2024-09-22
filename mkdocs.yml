@@ -1,0 +1,21 @@
+site_name: Symmetry-Based Dimension Reduction
+repo_url: 'https://github.com/preetscient/symmetry-based-dimension-reduction'
+nav:
+  - Home: index.md
+  - Flow of data: dataflow.md
+  - Processing script: processing.md
+  - Finding automorphisms: auts.md
+  - Preparing data for GAP: gaut2gap.md
+  - Dimension reduction: lumping.md
+  - Dashboard and Visualisation: viz.md
+
+plugins:
+  - mkdocstrings
+
+theme:
+  name: material  # or any other theme you prefer
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc

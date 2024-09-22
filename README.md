@@ -46,12 +46,12 @@ After setting up the environment, you can run the Python script main.py directly
 1. Open Command Prompt or PowerShell.
 2. Navigate to the directory containing main.py.
 3. Run the script using the command:
-`python main.py`
+`python -m dsdp-lumping`
 
 #### For macOS and Linux Users
 1. Open a terminal.
 2. Navigate to the directory containing main.py.
 3. Run the script with:
-`python main.py`
+`python -m dsdp-lumping`
 
 
