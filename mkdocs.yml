@@ -1,4 +1,5 @@
 site_name: Symmetry-Based Dimension Reduction
+site_dir: site
 repo_url: 'https://github.com/preetscient/symmetry-based-dimension-reduction'
 nav:
   - Home: index.md
