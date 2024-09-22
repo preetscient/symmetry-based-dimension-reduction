@@ -13,7 +13,11 @@ HASH_FILE = BASE_PATH / 'data_hash.json'  # File to store the hash value
 
 def calculate_dir_hash(directory: Path) -> str:
     """
-    Calculate a combined hash for all files in the directory based solely on their contents.
+    Calculate a combined hash for all files in the specified directory based solely on their contents.
+    Args:
+        directory (Path): The directory path whose contents will be hashed.
+    Returns:
+        str: A hexadecimal string representing the combined hash of the directory contents.
     """
     hash_obj = hashlib.sha256()
 
@@ -30,8 +34,11 @@ def calculate_dir_hash(directory: Path) -> str:
 
 def read_stored_hash() -> str:
     """
-    Read the stored hash from the HASH_FILE if it exists.
-    Handle cases where the file is empty or corrupted.
+    Reads the stored hash from the HASH_FILE if it exists (HASH_FILE is stored at the start of this script).
+    Handles cases where the file is empty or corrupted.
+    
+    Returns:
+        str: The stored hash string if it exists and is valid, otherwise an empty string.
     """
     if HASH_FILE.exists():
         try:
@@ -46,14 +53,24 @@ def read_stored_hash() -> str:
 
 
 def store_hash(new_hash: str):
-    # Store the calculated hash in the HASH_FILE.
+    """
+    Stores the calculated hash in HASH_FILE which is set at the start of this script.
+
+    Args:
+        new_hash (str): The new hash string to be stored.
+    """
 
     with open(HASH_FILE, 'w') as f:
         json.dump({'dir_hash': new_hash}, f)
     return
 
 def clear_folders(folders):
-    # Clear all files in the specified folders.
+    """
+    Clear all files and subdirectories within the specified folders.
+
+    Args:
+        folders (list[Path]): A list of folder paths to be cleared.
+    """
 
     for folder in folders:
         if folder.exists() and folder.is_dir():
@@ -67,7 +84,13 @@ def clear_folders(folders):
     return
 
 def main():
-    # Calculate current directory hash
+    """
+    Main function to check for changes in user data and run necessary processing steps.
+
+    It calculates the current hash of the user data directory and compares it with the stored hash.
+    If there are changes, it clears specific folders, runs the data processing steps, and updates the stored hash.
+    Finally, it runs the visualization process.
+    """
     current_hash = calculate_dir_hash(DATA_DIR)
     stored_hash = read_stored_hash()
     

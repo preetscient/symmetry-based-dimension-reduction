@@ -22,8 +22,8 @@ def main():
     
     # Define the base path for the log and output files
     logstub = str(BASE_PATH / 'data' / 'processed' / 'saucy_output' / stub)
-     # File containing the network in .scy format
-    
+     
+    # File containing the network in .scy format    
     fname = str(BASE_PATH / 'data' / 'processed' / 'processing_output' / stub) + '.scy'
     
     # Run the Saucy tool via a subprocess call, passing the input file
