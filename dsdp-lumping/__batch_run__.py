@@ -4,11 +4,19 @@ import hashlib
 import glob
 import time
 
-from src import batch_lumping, batch_gaut2gap, batch_auts
-from src import vizprocessing
+from . import batch_lumping, batch_gaut2gap, batch_auts
+from . import vizprocessing
 
 def compute_file_hash(filepath):
-    # Compute MD5 hash of the specified file.
+    """
+    Computes the MD5 hash of the specified file.
+
+    Parameters:
+    filepath (str): The path to the file for which the MD5 hash will be calculated.
+
+    Returns:
+    str: The MD5 hash of the file as a hexadecimal string.
+    """
     hash_md5 = hashlib.md5() # Create a new MD5 hash object
     with open(filepath, "rb") as f: # Open the file in binary mode
         for chunk in iter(lambda: f.read(4096), b""): # Read file in chunks of 4096 bytes
@@ -16,8 +24,16 @@ def compute_file_hash(filepath):
     return hash_md5.hexdigest() # Return the computed hash as a hex string
 
 def has_data_changed(DATA_FILES,HASH_FILES):
-    #Check if any data files have changed by comparing stored hashes.
+    """
+    Checks if any data files have changed by comparing stored hashes with current hashes.
 
+    Parameters:
+    DATA_FILES (list): A list of paths to the data files to be checked.
+    HASH_FILES (dict): A dictionary mapping each data file path to its corresponding hash file path.
+
+    Returns:
+    bool: True if any data file has changed or if any hash file is missing; otherwise, False.
+    """
     for data_file in DATA_FILES: # Iterate through each data file
         hash_file = HASH_FILES[data_file] # Get corresponding hash file
         if not os.path.exists(hash_file):
@@ -33,8 +49,16 @@ def has_data_changed(DATA_FILES,HASH_FILES):
     return False # If all hashes match, data has not changed
 
 def store_data_hashes(DATA_FILES,HASH_FILES):
-    # Store the current hashes of the data files in corresponding hash files.
-    """ Store the current hashes of data files. """
+    """
+    Stores the current hashes of the data files in their corresponding hash files.
+
+    Parameters:
+    DATA_FILES (list): A list of paths to the data files.
+    HASH_FILES (dict): A dictionary mapping each data file path to its corresponding hash file path.
+
+    Returns:
+    None
+    """
     for data_file in DATA_FILES:
         current_hash = compute_file_hash(data_file)
         with open(HASH_FILES[data_file], 'w') as file:
@@ -42,6 +66,21 @@ def store_data_hashes(DATA_FILES,HASH_FILES):
     return
 
 def main():
+    """
+    Main function to process network data files.
+
+    This function performs the following steps:
+    1. Sets up paths and identifies data files to process.
+    2. Checks if any data files have changed by comparing file hashes.
+    3. If no changes are detected, processing is skipped.
+    4. If changes are detected:
+       - Runs various processing scripts (`batch_auts`, `batch_gaut2gap`, `batch_lumping`).
+       - Updates visualizations with `vizprocessing`.
+       - Stores new file hashes to track processed data.
+    
+    Returns:
+    None
+    """
     current_file_path   = os.path.abspath(__file__)
     base_path = os.path.join(current_file_path, '..')
     base_path = os.path.normpath(base_path)

@@ -9,6 +9,7 @@ nav:
   - Preparing data for GAP: gaut2gap.md
   - Dimension reduction: lumping.md
   - Dashboard and Visualisation: viz.md
+  - Batch processing: batch_processing.md
 
 plugins:
   - mkdocstrings

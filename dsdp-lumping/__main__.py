@@ -2,9 +2,10 @@ import hashlib
 from pathlib import Path
 import json
 import shutil
+import sys
 
 # from dsdp-lumping.py import processing, lumping, auts, gaut2gap
-from . import processing, lumping, auts, gaut2gap, viz_layout
+from . import processing, lumping, auts, gaut2gap, viz_layout, __batch_run__
 
 BASE_PATH = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_PATH / 'data' / 'external' / '5_user_data'
@@ -91,9 +92,20 @@ def main():
     If there are changes, it clears specific folders, runs the data processing steps, and updates the stored hash.
     Finally, it runs the visualization process.
     """
+    # Check for command-line arguments
+    if len(sys.argv) > 1:
+        mode = sys.argv[1]
+        if mode == 'batch': 
+            batch_run.run()  # Assume run() is a function in __batch_processing__.py
+        else:
+            print(f"Unknown mode: {mode}")
+    else:
+        print("Running default main operation...")
+
     current_hash = calculate_dir_hash(DATA_DIR)
     stored_hash = read_stored_hash()
-    
+
+
     if current_hash == stored_hash:
         print("Files are unchanged, skipping processes.")
     else:
